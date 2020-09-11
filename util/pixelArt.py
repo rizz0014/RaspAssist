@@ -56,18 +56,38 @@ def snake():
     o = black = (0, 0, 0)
 
     avatar = [
-        b, b, b, b, b, b, b, g,
-        b, g, g, g, g, g, g, g,
-        b, g, b, b, b, b, b, b,
-        b, g, g, g, g, g, b, b,
-        b, b, b, b, b, g, b, b,
-        o, g, o, g, g, g, b, b,
-        g, g, g, b, b, b, b, b,
-        r, b, b, b, b, b, b, b,
+        o, o, o, o, o, o, o, g,
+        o, g, g, g, g, g, g, g,
+        o, g, o, o, o, o, o, o,
+        o, g, g, g, g, g, o, o,
+        o, o, o, o, o, g, o, o,
+        b, g, b, g, g, g, o, o,
+        g, g, g, o, o, o, o, o,
+        r, o, o, o, o, o, o, o,
     ]
     return avatar
 
+
 def snake2():
+    # palette
+    b = blue = (73, 95, 121)
+    g = green = (0, 160, 77)
+    r = red = (255, 0, 0)
+    o = black = (0, 0, 0)
+
+    avatar = [
+        o, o, o, o, o, o, o, g,
+        o, g, g, g, g, g, g, g,
+        o, g, o, o, o, o, o, o,
+        o, g, g, g, g, g, o, o,
+        o, o, o, o, o, g, o, o,
+        b, g, b, g, g, g, o, o,
+        g, g, g, o, o, o, o, o,
+        r, o, o, o, o, o, o, o,
+    ]
+    return avatar
+
+def snakeNotify():
     # palette
     b = blue = (73, 95, 121)
     g = green = (0, 160, 77)
@@ -87,13 +107,13 @@ def snake2():
     return avatar
 
 
-imagesTest = [pikachu, kirby]
-imageSnake = [snake, snake2]
-count = 0
-
-while count < 10:
-    sense.set_pixels(imageSnake[count % len(imageSnake)]())
-    time.sleep(1)
-    count += 1
-
-sense.clear()
+# imagesTest = [pikachu, kirby]
+# imageSnake = [snake, snakeNotify]
+# count = 0
+#
+# while count < 10:
+#     sense.set_pixels(imageSnake[count % len(imageSnake)]())
+#     time.sleep(1)
+#     count += 1
+#
+# sense.clear()
