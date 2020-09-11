@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RaspAssist.iml" filepath="$PROJECT_DIR$/.idea/RaspAssist.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../SenseHatIntro/.idea/SenseHatIntro.iml" filepath="$PROJECT_DIR$/../SenseHatIntro/.idea/SenseHatIntro.iml" />
     </modules>
   </component>
 </project>

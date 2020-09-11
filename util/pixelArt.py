@@ -1,9 +1,4 @@
-from sense_hat import SenseHat
-import time
-
-sense = SenseHat()
-sense.low_light = True
-
+# avatar for the Assistant
 
 def pikachu():
     # palette
@@ -76,18 +71,19 @@ def snake2():
     o = black = (0, 0, 0)
 
     avatar = [
-        o, o, o, o, o, o, o, g,
-        o, g, g, g, g, g, g, g,
         o, g, o, o, o, o, o, o,
-        o, g, g, g, g, g, o, o,
-        o, o, o, o, o, g, o, o,
-        b, g, b, g, g, g, o, o,
-        g, g, g, o, o, o, o, o,
-        r, o, o, o, o, o, o, o,
+        o, g, g, g, g, g, g, o,
+        o, o, o, o, o, o, g, o,
+        o, g, g, g, g, g, g, o,
+        o, g, g, g, o, o, o, o,
+        o, o, b, g, b, o, o, o,
+        o, o, g, g, g, o, o, o,
+        o, o, r, o, o, o, o, o,
     ]
     return avatar
 
-def snakeNotify():
+
+def snakeExclam():
     # palette
     b = blue = (73, 95, 121)
     g = green = (0, 160, 77)
@@ -100,20 +96,28 @@ def snakeNotify():
         o, o, o, g, g, o, o, o,
         o, o, o, g, g, o, o, o,
         o, o, o, o, o, o, o, o,
-        o, o, b, g, b, g, o, o,
+        o, o, b, g, b, o, o, o,
         o, o, g, g, g, o, o, o,
         o, o, r, o, o, o, o, o,
     ]
     return avatar
 
 
-# imagesTest = [pikachu, kirby]
-# imageSnake = [snake, snakeNotify]
-# count = 0
-#
-# while count < 10:
-#     sense.set_pixels(imageSnake[count % len(imageSnake)]())
-#     time.sleep(1)
-#     count += 1
-#
-# sense.clear()
+def snakeQuestion():
+    # palette
+    b = blue = (73, 95, 121)
+    g = green = (0, 160, 77)
+    r = red = (255, 0, 0)
+    o = black = (0, 0, 0)
+
+    avatar = [
+        o, o, g, g, g, g, g, o,
+        o, o, o, o, o, o, g, o,
+        o, o, o, g, g, g, g, o,
+        o, o, o, g, o, o, o, o,
+        o, o, o, o, o, o, o, o,
+        o, o, b, g, b, o, o, o,
+        o, o, g, g, g, o, o, o,
+        o, o, r, o, o, o, o, o,
+    ]
+    return avatar
