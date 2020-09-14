@@ -1,5 +1,6 @@
 from time import sleep
 import schedule
+import sys
 from util import animation
 from util import sensor
 from sense_hat import SenseHat
@@ -15,7 +16,7 @@ def main():
     # Schedule Time
     schedule.every(5).minutes.do(animation.snake)
     schedule.every().hour.do(animation.snakeNotify)
-    schedule.every(30).seconds.do(sensor.readings)
+    schedule.every(60).seconds.do(sensor.readings)
 
     # Lunch time
     schedule.every().day.at('11:30').do(animation.kirby)
@@ -31,6 +32,9 @@ def main():
     schedule.every().day.at('23:00').do(animation.pikachu)
     schedule.every().day.at('23:00').do(animation.snakeNotify)
     schedule.every().day.at('00:00').do(animation.snakeNotify)
+
+    # To quit program before the Office power routine goes off
+    # schedule.every().day.at('00:50').do(sys.exit(0))
 
     # animation.snakeConfused()
 
