@@ -23,7 +23,7 @@ def snake():
 
     while count < 10:
         sense.set_pixels(snakeAnimated[count % len(snakeAnimated)]())
-        time.sleep(1)
+        time.sleep(0.5)
         count += 1
 
     sense.clear()
@@ -31,11 +31,11 @@ def snake():
 def snakeNotify():
     snake = pixel.snakeExclam()
     sense.set_pixels(snake)
-    time.sleep(2)
+    time.sleep(5)
     sense.clear()
 
 def snakeQuestion():
     snake = pixel.snakeQuestion()
     sense.set_pixels(snake)
-    time.sleep(2)
+    time.sleep(5)
     sense.clear()

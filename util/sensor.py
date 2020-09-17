@@ -7,6 +7,8 @@ def readings():
 
     global senseTemperature
     global cpu_temp
+    global sensePressure
+    global senseHumidity
 
     # to adjust the CPU temperature / ambient temperature
     cpu_temp = 0
@@ -15,6 +17,8 @@ def readings():
     cpu_temp = cpu_temp[5:]
 
     senseTemperature = sense.get_temperature()
+    sensePressure = sense.get_pressure() + 16  # calibration
+    senseHumidity = sense.get_humidity() + 14  # calibration
 
     if cpu_temp == "42.9":
         senseTemperature = senseTemperature - 14.5
@@ -40,8 +44,8 @@ def readings():
 
     # using the OOP concept
     temp = s.Temperature("Temp", str(round(senseTemperature, 1)))
-    pressure = s.Pressure("Pressure", str(round(sense.get_pressure(), 1)))
-    humidity = s.Humidity("Humidity", str(round(sense.get_humidity(), 1)))
+    pressure = s.Pressure("Pressure", str(round(sensePressure, 1)))
+    humidity = s.Humidity("Humidity", str(round(senseHumidity, 1)))
 
     url = "https://dweet.io/dweet/for/rizz0014sense?" + "Temp=" + str(temp.data) + "&" + "Pressure=" + str(pressure.data) + "&" + "Humidity=" + str(humidity.data)
 
