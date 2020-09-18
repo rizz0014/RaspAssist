@@ -2,6 +2,12 @@
 
 This project was created by Guilherme Rizzo to study Python and the use of Sense Hat.
 
+#### What is Sense Hat?
+
+"The Sense HAT is an add-on board for the Raspberry Pi, made especially for the Astro Pi competition. The board allows you to make measurements of temperature, humidity, pressure, and orientation, and to output information using its built-in LED matrix."
+
+You can find more information [HERE](https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat). 
+
 ## Learning Objectives
 
 * Python anatomy
@@ -68,6 +74,6 @@ Happy coding!
 
 ***Guilherme Rizzo***
 
-- rizz0014@algonquinlive.com
-- rizz0014.github.com
-- linkedin.com/in/guilherme-rizzo/
+<rizz0014@algonquinlive.com>
+[rizz0014.github.com](https://rizz0014.github.io/)
+[LinkedIn](https://www.linkedin.com/in/guilherme-rizzo/)
