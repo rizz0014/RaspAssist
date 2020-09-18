@@ -74,6 +74,6 @@ Happy coding!
 
 ***Guilherme Rizzo***
 
-<rizz0014@algonquinlive.com>
-[rizz0014.github.com](https://rizz0014.github.io/)
+<rizz0014@algonquinlive.com>  
+[rizz0014.github.com](https://rizz0014.github.io/)  
 [LinkedIn](https://www.linkedin.com/in/guilherme-rizzo/)
