@@ -121,3 +121,69 @@ def snakeQuestion():
         o, o, r, o, o, o, o, o,
     ]
     return avatar
+
+def snakeTemp(sensor):
+    # palette
+    b = blue = (73, 95, 121)
+    g = green = (0, 160, 77)
+    r = red = (255, 0, 0)
+    o = black = (0, 0, 0)
+    h = high = (255, 30, 0)
+    l = low = (0, 0, 255)
+
+    x = h if sensor == "h" else g
+
+    avatar = [
+        o, x, x, x, x, x, x, o,
+        o, x, x, x, x, x, x, o,
+        o, o, o, x, x, o, o, o,
+        o, o, o, x, x, o, o, o,
+        o, o, o, x, x, o, o, o,
+        o, o, b, x, b, o, o, o,
+        o, o, x, x, x, o, o, o,
+        o, o, r, o, o, o, o, o,
+    ]
+    return avatar
+
+def snakePressure():
+    # palette
+    b = blue = (73, 95, 121)
+    g = green = (0, 160, 77)
+    r = red = (255, 0, 0)
+    o = black = (0, 0, 0)
+
+    avatar = [
+        o, g, g, g, g, g, g, o,
+        o, g, g, o, o, g, g, o,
+        o, g, g, o, o, g, g, o,
+        o, g, g, g, g, g, g, o,
+        o, g, g, o, o, o, o, o,
+        b, g, b, o, o, o, o, o,
+        g, g, g, o, o, o, o, o,
+        r, o, o, o, o, o, o, o,
+    ]
+    return avatar
+
+def snakeHumidity(sensor):
+    # palette
+    b = blue = (73, 95, 121)
+    g = green = (0, 160, 77)
+    r = red = (255, 0, 0)
+    o = black = (0, 0, 0)
+    h = highHumid = (0, 0, 255)
+    l = lowHumid = (255, 30, 0)
+
+
+    x = l if sensor == "l" else g
+
+    avatar = [
+        o, x, x, o, o, x, x, o,
+        o, x, x, o, o, x, x, o,
+        o, x, x, o, o, x, x, o,
+        o, x, x, x, x, x, x, o,
+        o, x, x, o, o, x, x, o,
+        b, x, b, o, o, x, x, o,
+        x, x, x, o, o, x, x, o,
+        r, o, o, o, o, o, o, o,
+    ]
+    return avatar

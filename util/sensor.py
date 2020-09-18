@@ -1,6 +1,8 @@
 from Classes import astroPi as s
 import requests, os
 from sense_hat import SenseHat
+from util import config
+
 sense = SenseHat()
 
 def readings():
@@ -41,6 +43,10 @@ def readings():
     else:
         senseTemperature = senseTemperature - 16
 
+    # passing the sensor values to the global variables at the config module
+    config.temp_value = senseTemperature
+    config.pressure_value = sensePressure
+    config.humidity_value = senseHumidity
 
     # using the OOP concept
     temp = s.Temperature("Temp", str(round(senseTemperature, 1)))

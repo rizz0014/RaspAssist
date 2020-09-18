@@ -3,7 +3,10 @@ import schedule
 import sys
 from util import animation
 from util import sensor
+from util import automation
+from util import config
 from sense_hat import SenseHat
+
 sense = SenseHat()
 sense.low_light = True
 
@@ -11,36 +14,13 @@ sense.low_light = True
 
 
 def main():
-    print("Testing the code structure")
+    print("Snaky, the Raspberry Assistant.")
 
-    # Schedule Time
-    schedule.every(5).minutes.do(animation.snake)
-    schedule.every().hour.do(animation.snakeNotify)
-    schedule.every(60).seconds.do(sensor.readings)
+    for i in range(5):
+        animation.snake()
+        sense.show_message("Hi! I'm Snaky, your friend!", text_colour=(0, 160, 77), scroll_speed=0.1)
 
-    # Lunch time
-    schedule.every().day.at('11:30').do(animation.kirby)
-    schedule.every().day.at('12:30').do(animation.kirby)
-    schedule.every().day.at('12:30').do(animation.snakeQuestion)
-    schedule.every().day.at('13:30').do(animation.kirby)
-    schedule.every().day.at('13:30').do(animation.snakeQuestion)
-
-    # Night time
-    schedule.every().day.at('20:00').do(animation.pikachu)
-    schedule.every().day.at('21:00').do(animation.pikachu)
-    schedule.every().day.at('22:00').do(animation.pikachu)
-    schedule.every().day.at('23:00').do(animation.pikachu)
-    schedule.every().day.at('23:00').do(animation.snakeNotify)
-    schedule.every().day.at('00:00').do(animation.snakeNotify)
-
-    # To quit program before the Office power routine goes off
-    # schedule.every().day.at('00:50').do(sys.exit(0))
-
-    # animation.snakeConfused()
-
-    while True:
-        schedule.run_pending()
-        sleep(1)
+    sense.clear()
 
 
 if __name__ == "__main__":
