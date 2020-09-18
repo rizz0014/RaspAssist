@@ -1,6 +1,6 @@
 # RaspAssist - Snaky
 
-This project was created by Guilherme Rizzo to study Python and the use of Sense Hat.
+This project was created by ***[Guilherme Rizzo](https://rizz0014.github.io/)*** to study Python and the use of Sense Hat.
 
 #### What is Sense Hat?
 
