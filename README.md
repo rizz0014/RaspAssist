@@ -31,9 +31,9 @@ You can find more information [HERE](https://projects.raspberrypi.org/en/project
 * Sensing the environment
 * Using joystick 
 
-### Snaky Assistant
+### Snake Assistant - "Noodles"
 
-Snaky is the assistant displayed on the Sense Hat and was created to perform some functions:
+The snake assistant displayed on the Sense Hat is called "Noodles" and it was created to perform some functions:
 
 * Cheer you up
 * Display the room Temperature, Humidity and Pressure every 15 minutes
@@ -41,9 +41,9 @@ Snaky is the assistant displayed on the Sense Hat and was created to perform som
 * If room temperature or humidity is out of the comfortable zone Snaky will change its colour
 * Remember you the lunch time and Night time
 
-#### Snaky Friends
+#### Noodles Friends
 
-Snaky has some friends to catch your attention to some important moments of the day:
+Noodles has some friends to catch your attention to some important moments of the day:
 
 * Lunch time - Kirby
 * Night time - Pikachu

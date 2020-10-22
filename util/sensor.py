@@ -20,7 +20,7 @@ def readings():
 
     senseTemperature = sense.get_temperature()
     sensePressure = sense.get_pressure() + 16  # calibration
-    senseHumidity = sense.get_humidity() + 14  # calibration
+    senseHumidity = sense.get_humidity() + 15  # calibration
 
     if cpu_temp == "42.9":
         senseTemperature = senseTemperature - 14.5
