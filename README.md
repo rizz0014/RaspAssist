@@ -1,4 +1,4 @@
-# RaspAssist - Snaky
+# RaspAssist - Noodles
 
 This project was created by ***[Guilherme Rizzo](https://rizz0014.github.io/)*** to study Python and the use of Sense Hat.
 
