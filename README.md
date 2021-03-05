@@ -1,4 +1,4 @@
-# RaspAssist - Noodles
+# RaspAssist - Snaky
 
 This project was created by ***[Guilherme Rizzo](https://rizz0014.github.io/)*** to study Python and the use of Sense Hat.
 
@@ -31,9 +31,9 @@ You can find more information [HERE](https://projects.raspberrypi.org/en/project
 * Sensing the environment
 * Using joystick 
 
-### Snake Assistant - "Noodles"
+### Snake Assistant - "Snaky"
 
-The snake assistant displayed on the Sense Hat is called "Noodles" and it was created to perform some functions:
+The snake assistant displayed on the Sense Hat is called "Snaky" and it was created to perform some functions:
 
 * Cheer you up
 * Display the room Temperature, Humidity and Pressure every 15 minutes
@@ -41,9 +41,9 @@ The snake assistant displayed on the Sense Hat is called "Noodles" and it was cr
 * If room temperature or humidity is out of the comfortable zone Snaky will change its colour
 * Remember you the lunch time and Night time
 
-#### Noodles Friends
+#### Snaky Friends
 
-Noodles has some friends to catch your attention to some important moments of the day:
+Snaky has some friends to catch your attention to some important moments of the day:
 
 * Lunch time - Kirby
 * Night time - Pikachu
