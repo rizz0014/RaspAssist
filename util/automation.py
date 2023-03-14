@@ -8,6 +8,7 @@ from util import senseDisplay as display
 from sense_hat import SenseHat
 sense = SenseHat()
 
+sense.clear()
 
 def mascot():
     schedule.every(3).minutes.do(animation.snake)
@@ -15,9 +16,9 @@ def mascot():
     schedule.every(60).seconds.do(sensor.readings)
     schedule.every(5).minutes.do(display.update_screen)
 
-def showData():
-    display.update_screen
-
+def showData(event):
+    if event.action == 'pressed':
+        display.update_screen
 
 def lunchTime():
     schedule.every().day.at('11:30').do(animation.kirby)
@@ -46,8 +47,11 @@ def goodbye():
 mascot()
 lunchTime()
 nightTime()
+showData()
+
 sense.stick.direction_any = showData
 
 while True:
     schedule.run_pending()
     sleep(1)
+    pass # This keeps the program running to receive joystick events
