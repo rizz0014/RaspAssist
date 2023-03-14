@@ -10,10 +10,13 @@ sense = SenseHat()
 
 
 def mascot():
-    schedule.every(5).minutes.do(animation.snake)
+    schedule.every(3).minutes.do(animation.snake)
     schedule.every().hour.do(animation.snakeNotify)
     schedule.every(60).seconds.do(sensor.readings)
-    schedule.every(15).minutes.do(display.update_screen)
+    schedule.every(5).minutes.do(display.update_screen)
+
+def showData():
+    display.update_screen
 
 
 def lunchTime():
@@ -43,6 +46,7 @@ def goodbye():
 mascot()
 lunchTime()
 nightTime()
+sense.stick.direction_any = showData
 
 while True:
     schedule.run_pending()
