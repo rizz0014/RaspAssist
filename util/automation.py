@@ -15,6 +15,7 @@ def mascot():
     schedule.every().hour.do(animation.snakeNotify)
     schedule.every(60).seconds.do(sensor.readings)
     schedule.every(5).minutes.do(display.update_screen)
+    schedule.every(15).minutes.do(animation.taco)
 
 def showData(event):
     if event.action == 'pressed':
@@ -29,6 +30,7 @@ def lunchTime():
 
 
 def nightTime():
+    schedule.every().day.at('15:55').do(animation.taco)
     schedule.every().day.at('16:00').do(animation.taco)
     schedule.every().day.at('16:05').do(animation.taco)
     schedule.every().day.at('16:10').do(animation.taco)
