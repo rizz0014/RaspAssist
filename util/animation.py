@@ -39,3 +39,9 @@ def snakeQuestion():
     sense.set_pixels(snake)
     time.sleep(5)
     sense.clear()
+
+def taco():
+    taco = pixel.tacoFedidos()
+    sense.set_pixels(taco)
+    time.sleep(30)
+    sense.clear()

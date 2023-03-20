@@ -187,3 +187,23 @@ def snakeHumidity(sensor):
         r, o, o, o, o, o, o, o,
     ]
     return avatar
+
+def tacoFedidos():
+    # palette
+    p = pelo = (243,159,22)
+    d = bodyDetail = (165,73,54)
+    e = eyes = (73, 95, 121)
+    n = noseMouth = (25,31,73)
+    b = (0, 0, 0) # Black
+
+    avatar = [
+        b, b, p, p, p, p, b, b,
+        b, p, b, p, e, p, b, b,
+        b, b, b, p, p, p, p, n,
+        b, b, b, p, n, n, b, b,
+        b, b, p, p, p, p, b, b,
+        b, p, p, d, p, p, b, b,
+        p, p, d, d, p, d, b, b,
+        p, p, p, d, p, d, b, b,
+    ]
+    return avatar

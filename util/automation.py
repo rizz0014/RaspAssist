@@ -29,6 +29,11 @@ def lunchTime():
 
 
 def nightTime():
+    schedule.every().day.at('16:00').do(animation.taco)
+    schedule.every().day.at('16:05').do(animation.taco)
+    schedule.every().day.at('16:10').do(animation.taco)
+    schedule.every().day.at('16:15').do(animation.taco)
+    schedule.every().day.at('16:20').do(animation.taco)
     schedule.every().day.at('20:00').do(animation.pikachu)
     schedule.every().day.at('21:00').do(animation.pikachu)
     schedule.every().day.at('22:00').do(animation.pikachu)
@@ -47,7 +52,7 @@ def goodbye():
 mascot()
 lunchTime()
 nightTime()
-showData()
+# showData()
 
 sense.stick.direction_any = showData
 

@@ -52,24 +52,25 @@ def update_screen():
         elif senseTemperature > 27 or senseHumidity < 30:
             sense.set_pixels(pixel.snakeExclam())
             time.sleep(2)
-            sense.clear()
+            sense.clear()   
 
+        # to set how many times to display the temp data
+        num = 2
 
-        # temp
-        tempString = str(round(senseTemperature, 1)) + " C"
-        snakeColour = "h" if senseTemperature > 27 else "g"
-        show_t(snakeColour)
-        sense.show_message(tempString, text_colour=green, scroll_speed=0.05) if senseTemperature < 27 else sense.show_message(tempString, text_colour=caution, scroll_speed=0.05)
-
-        # humidity
-        humidityString = str(round(senseHumidity, 1)) + " %"
-        snakeColour = "l" if senseHumidity < 30 else "g"
-        show_h(snakeColour)
-        sense.show_message(humidityString, text_colour=green, scroll_speed=0.05) if senseHumidity > 30 else sense.show_message(humidityString, text_colour=caution, scroll_speed=0.05)
-
-        # pressure
-        pressureString = str(round(sensePressure, 1)) + " Pa"
-        show_p()
-        sense.show_message(pressureString, text_colour=green, scroll_speed=0.05)
-
-
+        for _ in range(num):
+            # temp
+            tempString = str(round(senseTemperature, 1)) + " C"
+            snakeColour = "h" if senseTemperature > 27 else "g"
+            show_t(snakeColour)
+            sense.show_message(tempString, text_colour=green, scroll_speed=0.05) if senseTemperature < 27 else sense.show_message(tempString, text_colour=caution, scroll_speed=0.05)
+        
+            # humidity
+            humidityString = str(round(senseHumidity, 1)) + " %"
+            snakeColour = "l" if senseHumidity < 30 else "g"
+            show_h(snakeColour)       
+            sense.show_message(humidityString, text_colour=green, scroll_speed=0.05) if senseHumidity > 30 else sense.show_message(humidityString, text_colour=caution, scroll_speed=0.05)
+        
+            # pressure
+            pressureString = str(round(sensePressure, 1)) + " Pa"
+            show_p()    
+            sense.show_message(pressureString, text_colour=green, scroll_speed=0.05)
