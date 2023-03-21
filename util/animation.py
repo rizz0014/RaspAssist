@@ -8,13 +8,13 @@ sense = SenseHat()
 def pikachu():
     pikachu = pixel.pikachu()
     sense.set_pixels(pikachu)
-    time.sleep(5)
+    time.sleep(10)
     sense.clear()
 
 def kirby():
     kirby = pixel.kirby()
     sense.set_pixels(kirby)
-    time.sleep(5)
+    time.sleep(10)
     sense.clear()
 
 def snake():
