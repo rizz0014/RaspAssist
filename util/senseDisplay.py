@@ -60,18 +60,14 @@ def update_screen():
         for _ in range(num):
             # temp
             tempString = str(round(senseTemperature, 1)) + " C"
-            # snakeColour = "h" if senseTemperature > 27 else "g"
-            snakeColour = "h" if senseTemperature > 27 else "l" if senseTemperature < 22 else "g"
+            snakeColour = "h" if senseTemperature > 27 else "l" if senseTemperature < 21 else "g"
             show_t(snakeColour)
-            # sense.show_message(tempString, text_colour=green, scroll_speed=0.05) if senseTemperature < 27 else sense.show_message(tempString, text_colour=caution, scroll_speed=0.05)
-            sense.show_message(tempString, text_colour=caution, scroll_speed=0.05) if senseTemperature > 27 else sense.show_message(tempString, text_colour=blue, scroll_speed=0.05) if senseTemperature < 22 else sense.show_message(tempString, text_colour=green, scroll_speed=0.05)
+            sense.show_message(tempString, text_colour=caution, scroll_speed=0.05) if senseTemperature > 27 else sense.show_message(tempString, text_colour=blue, scroll_speed=0.05) if senseTemperature < 21 else sense.show_message(tempString, text_colour=green, scroll_speed=0.05)
         
             # humidity
             humidityString = str(round(senseHumidity, 1)) + " %"
-            # snakeColour = "h" if senseHumidity < 30 else "g"
             snakeColour = "l" if senseHumidity < 30  else "h" if senseHumidity > 50 else "g"
             show_h(snakeColour)       
-            # sense.show_message(humidityString, text_colour=green, scroll_speed=0.05) if senseHumidity > 30 else sense.show_message(humidityString, text_colour=caution, scroll_speed=0.05)
             sense.show_message(humidityString, text_colour=caution, scroll_speed=0.05) if senseHumidity < 30 else sense.show_message(humidityString, text_colour=blue, scroll_speed=0.05) if senseHumidity > 50 else sense.show_message(humidityString, text_colour=green, scroll_speed=0.05)
         
             # pressure
