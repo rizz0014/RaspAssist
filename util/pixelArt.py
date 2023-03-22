@@ -131,7 +131,7 @@ def snakeTemp(sensor):
     h = high = (255, 30, 0)
     l = low = (0, 0, 255)
 
-    x = h if sensor == "h" else g
+    x = h if sensor == "h" else l if sensor == "l" else g
 
     avatar = [
         o, x, x, x, x, x, x, o,
@@ -174,7 +174,7 @@ def snakeHumidity(sensor):
     l = lowHumid = (255, 30, 0)
 
 
-    x = l if sensor == "l" else g
+    x = l if sensor == "l" else h if sensor == "h" else g
 
     avatar = [
         o, x, x, o, o, x, x, o,
