@@ -25,25 +25,25 @@ def readings():
     senseHumidity = sense.get_humidity() + 22  # calibration
 
     if cpu_temp == "42.9":
-        senseTemperature = senseTemperature - 14.5
-    elif cpu_temp == "44.0":
-        senseTemperature = senseTemperature - 14.8
-    elif cpu_temp == "44.5":
-        senseTemperature = senseTemperature - 15.2
-    elif cpu_temp == "45.1":
         senseTemperature = senseTemperature - 15.5
-    elif cpu_temp == "46.7":
-        senseTemperature = senseTemperature - 15.6
-    elif cpu_temp == "47.2":
-        senseTemperature = senseTemperature - 15.7
-    elif cpu_temp == "47.8":
+    elif cpu_temp == "44.0":
         senseTemperature = senseTemperature - 15.8
+    elif cpu_temp == "44.5":
+        senseTemperature = senseTemperature - 16.2
+    elif cpu_temp == "45.1":
+        senseTemperature = senseTemperature - 16.5
+    elif cpu_temp == "46.7":
+        senseTemperature = senseTemperature - 16.6
+    elif cpu_temp == "47.2":
+        senseTemperature = senseTemperature - 16.7
+    elif cpu_temp == "47.8":
+        senseTemperature = senseTemperature - 16.8
     elif cpu_temp == "48.3":
-        senseTemperature = senseTemperature - 15.85
+        senseTemperature = senseTemperature - 16.85
     elif cpu_temp == "48.9":
-        senseTemperature = senseTemperature - 15.9
+        senseTemperature = senseTemperature - 16.9
     else:
-        senseTemperature = senseTemperature - 16
+        senseTemperature = senseTemperature - 17
 
     # passing the sensor values to the global variables at the config module
     config.temp_value = senseTemperature
