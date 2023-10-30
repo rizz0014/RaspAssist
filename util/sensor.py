@@ -1,6 +1,7 @@
 from Classes import astroPi as s
 import requests, os
 from sense_hat import SenseHat
+from datetime import datetime
 from util import config
 
 sense = SenseHat()
@@ -18,9 +19,10 @@ def readings():
     cpu_temp = cpu_temp[:-3]
     cpu_temp = cpu_temp[5:]
 
+    dt = datetime.now()
     senseTemperature = sense.get_temperature()
     sensePressure = sense.get_pressure() + 16  # calibration
-    senseHumidity = sense.get_humidity() + 15  # calibration
+    senseHumidity = sense.get_humidity() + 22  # calibration
 
     if cpu_temp == "42.9":
         senseTemperature = senseTemperature - 14.5
@@ -47,13 +49,14 @@ def readings():
     config.temp_value = senseTemperature
     config.pressure_value = sensePressure
     config.humidity_value = senseHumidity
+    config.timestamp = dt
 
     # using the OOP concept
     temp = s.Temperature("Temp", str(round(senseTemperature, 1)))
     pressure = s.Pressure("Pressure", str(round(sensePressure, 1)))
     humidity = s.Humidity("Humidity", str(round(senseHumidity, 1)))
 
-    url = "https://dweet.io/dweet/for/rizz0014sense?" + "Temp=" + str(temp.data) + "&" + "Pressure=" + str(pressure.data) + "&" + "Humidity=" + str(humidity.data)
+    url = "https://dweet.io/dweet/for/rizz0014sense?" + "Time=" + str(dt) + "&" + "Temp=" + str(temp.data) + "&" + "Pressure=" + str(pressure.data) + "&" + "Humidity=" + str(humidity.data)
 
     r = requests.post(url)
 
@@ -62,3 +65,5 @@ def readings():
     print("-Pressure: " + str(pressure.data) + " Pa")
     print("-Humidity: " + str(humidity.data) + " %")
     print("\nReadings recorded")
+
+    sense.clear()

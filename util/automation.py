@@ -45,7 +45,7 @@ def nightTime():
 
 
 def goodbye():
-    '''To quit program before Office power supply routine goes off'''
+    '''NOT IN USE - To quit program before Office power supply routine goes off'''
     # schedule.every().day.at('00:50').do(sys.exit(0))
 
 
